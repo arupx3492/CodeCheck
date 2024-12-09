@@ -87,8 +87,7 @@ public class AccountServiceImpl implements AccountService {
             throw new IllegalArgumentException("Deposit amount must be greater than zero.");
         }
         User user = findUserById(userId);
-        Account account = new Account();
-        account = user.getAccounts();
+        Account account = user.getAccounts();
         account.setBalance(account.getBalance() + amount);
         accountRepo.save(account);
 
@@ -98,8 +97,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public String withdraw(int userId, double amount) {
         User user = findUserById(userId);
-        Account account = new Account();
-        account = user.getAccounts();
+        Account account = user.getAccounts();
 
         double currentBalance = account.getBalance();
 

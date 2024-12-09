@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Entity
 public class Account {
-// @Data was not working . I have created manual Getter setter and constructor
+// Lombok was not working . I have created manual Getter setter and constructor
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
